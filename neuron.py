@@ -1,4 +1,4 @@
-from random import *
+import random
 
 
 # Число Эйлера
@@ -17,8 +17,9 @@ def dot(x: list, y: list) -> list:
 class Neuron:
      # weight - начальные рандомные веса для синапсов
      # bias - смещение нейрона
-     def __init__(self, weight = None, bias = 0) -> None:
-          self.weight = weight or [random(), random(), random()]
+     def __init__(self, weight = None, bias = 0, random_seed = 1) -> None:
+          random.seed(random_seed)
+          self.weight = weight or [random.random(), random.random(), random.random()]
           self.bias = bias
      
      def compute(self, x):

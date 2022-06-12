@@ -1,4 +1,4 @@
-from neuron import *
+from neuron import Neuron
 
 
 training = {
