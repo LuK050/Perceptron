@@ -10,9 +10,9 @@ training = {
 
 # Создание и обучение нейрона с сдвигом -3
 neuron = Neuron(bias = -3)
-neuron.education(training, 1000)
+neuron.education(training, 5000)
 
 while True:
-    x = [[int(input()), int(input()), int(input())]]
-    print(x)
-    print(neuron.compute(x))
+    x = (input("> ")).split(" ")
+    result = neuron.compute([[int(i) for i in x]])[0]
+    print("Результат:", result, "≈", round(result), "\n")
